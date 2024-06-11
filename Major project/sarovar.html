@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Page UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 30px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header img {
+            width: 100px;
+        }
+        .header input {
+            flex-grow: 1;
+            padding: 20px 20px;
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .header button {
+            padding: 20px 30px;
+            background-color: #6cfb48;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .breadcrumbs {
+            color: #888;
+            font-size: 14px;
+        }
+        .restaurant-header {
+            display: flex;
+            margin-top: 20px;
+        }
+        .restaurant-header img {
+            width: 60%;
+            border-radius: 10px;
+        }
+        .restaurant-info {
+            padding-left: 20px;
+        }
+        .restaurant-info h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .restaurant-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .restaurant-info .buttons {
+            margin-top: 10px;
+        }
+        .restaurant-info .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .restaurant-info .buttons button.direction {
+            background-color: #3bb77e;
+            color: #fff;
+        }
+        .restaurant-info .buttons button.bookmark {
+            background-color: #ffcc00;
+            color: #fff;
+        }
+        .restaurant-info .buttons button.share {
+            background-color: #555;
+            color: #fff;
+        }
+        .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .ratings .rating {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .ratings .rating span {
+            margin-left: 5px;
+            color: #666;
+        }
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        .side-images img {
+            width: 100px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-container {
+            display: flex;
+        }
+        .menu-categories {
+            width: 200px;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .menu-categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-categories li {
+            padding: 5px 0;
+        }
+        .menu-items {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .menu-item .details {
+            flex-grow: 1;
+        }
+        .menu-item .details h3 {
+            margin: 0;
+        }
+        .menu-item .details .price {
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+        }
+        .menu-item .details .rating {
+            color: rgb(255, 225, 0);
+        }
+        footer {
+            background-color: #d1c1c1;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        footer .buttons {
+            display: inline-block;
+        }
+        footer .buttons a button {
+            padding: 40px 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: #76df74;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="ZOMATO.png" alt="Zomato Logo">
+        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+        <a href="login.html"> <button>Log in</button></a>
+        <a href="signup.html"> <button>Sign up</button></a>
+    </div>
+    <div class="container">
+        <div class="breadcrumbs">
+            Home / India / Ongole / Ongole Locality / Hotel Paradise / Order Online
+        </div>
+        <div class="restaurant-header">
+            <img src="sarovar.avif" alt="Food Image">
+            <div class="restaurant-info">
+                <h1>Hotel Sarovar</h1>
+                <p>Andhra, Biryani, North Indian, South Indian</p>
+                <p>Ongole Locality, Ongole</p>
+                <div class="buttons">
+                    <button class="direction">Direction</button>
+                    <button class="bookmark">Bookmark</button>
+                    <button class="share">Share</button>
+                </div>
+                <div class="ratings">
+                    <div class="rating">
+                        <span style="color: green;">4.6</span>
+                        <span>107 Dining Ratings</span>
+                    </div>
+                    <div class="rating">
+                        <span style="color: orange;">3.9</span>
+                        <span>17.6K Reviews</span>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="menu-categories">
+            <ul>
+                <li>Best in Biryani (9)</li>
+                <li style="font-weight: bold; color: red;">Our Specials (2)</li>
+                <li>Exclusive Bulk Order Veg and Non Veg Packs (4)</li>
+                <li >Starters (27)</li>
+                <li>Main Course (40)</li>
+                <li>Roti (1)</li>
+                <li>Rice and Biryani (8)</li>
+                <li>Fried Rice (9)</li>
+                <li>Snacks (9)</li>
+                <li>Drinks (Beverages) (2)</li>
+            </ul>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="gobi.jpg" alt="Gobi Manchurian">
+                <div class="details">
+                    <h3>Gobi Manchurian</h3>
+                    <div class="rating">★★★☆☆ (39 votes)</div>
+                    <div class="price">₹190</div>
+                    <p>A tempting and piquant snack made with tossing cauliflower nuggets in ...</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="veg manchu.jpeg" alt="Veg Manchurian">
+                <div class="details">
+                    <h3>Veg Manchurian</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹220</div>
+                    <p>Deep-fried little veg balls tossed in pungent spices ...</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="VegBullets6.jpg" alt="Veg Bullet">
+                <div class="details">
+                    <h3>Veg Bullet</h3>
+                    <div class="rating">★★★★☆ (53 votes)</div>
+                    <div class="price">₹200</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="paneer-manchurian.jpg" alt="Paneer Manchurian">
+                <div class="details">
+                    <h3>Paneer Manchurian</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹250</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="panner tikka.jpg" alt="Paneer tikka">
+                <div class="details">
+                    <h3>Paneer Tikka</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹300</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="panner chilli.webp" alt="chilli paneer">
+                <div class="details">
+                    <h3>Chilli Paneer</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹320</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="crispy corn.jpg" alt="crispy corn">
+                <div class="details">
+                    <h3>Crispy Corn</h3>
+                    <div class="rating">★★★☆☆ (32 votes)</div>
+                    <div class="price">₹220</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chicken tiika.webp" alt="chicken tikka">
+                <div class="details">
+                    <h3>Chicken Tikka</h3>
+                    <div class="rating">★★★☆☆ (50 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="panner chilli.webp" alt="chilli paneer">
+                <div class="details">
+                    <h3>Chilli Paneer</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹320</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chicken lollipop.webp" alt="chicken lollipop">
+                <div class="details">
+                    <h3>Chicken lollipop</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="biriyani rice.jpg" alt="Biriyani rice">
+                <div class="details">
+                    <h3>Biriyani Rice</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹250</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="veg biriyani.jpg" alt="Veg biriyani">
+                <div class="details">
+                    <h3>Veg Biriyani</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹300</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="panner biriyani.jpg" alt="paneer biriyani">
+                <div class="details">
+                    <h3>Paneer biriyani</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chicken biriyani.webp" alt="chicken biriyani">
+                <div class="details">
+                    <h3>Chicken Biriyani</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="veg fried rice.jpg" alt="Veg fried rice">
+                <div class="details">
+                    <h3>Veg Fried rice</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹200</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="kaju fried rice.jpg" alt="Kaju Fried rice">
+                <div class="details">
+                    <h3>Kaju Fried rice</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹250</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="curd rice.webp" alt="Curd rice">
+                <div class="details">
+                    <h3>Curd Rice</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹150</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="butter naan.cms" alt="Butter naan">
+                <div class="details">
+                    <h3>Butter Naan</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹100</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="roti.jpg" alt="Plain Roti">
+                <div class="details">
+                    <h3>Plain Roti</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹50</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="pbm.webp" alt="Panner Butter Masala">
+                <div class="details">
+                    <h3>Panner Butter Masala</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="kaju curry.jpg" alt="Kaju curry">
+                <div class="details">
+                    <h3>Kaju curry</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="mix veg c.jpg" alt="Mix veg">
+                <div class="details">
+                    <h3>Mix Veg</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹250</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="methi chaman.JPG" alt="Methi chaman">
+                <div class="details">
+                    <h3>Methi chaman</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹300</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="dal fry.webp" alt="Dal Fry">
+                <div class="details">
+                    <h3>Dal Fry</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹150</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chicken cuury.jpg" alt=" Special Chicken Curry">
+                <div class="details">
+                    <h3> Special Chicken Curry</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹320</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="kadai chic.jpg" alt="Kadai chicken">
+                <div class="details">
+                    <h3>Kadai chicken</h3>
+                    <div class="rating">★★★★☆ (24 votes)</div>
+                    <div class="price">₹350</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="buttons">
+            <a href="Home.html"><button>Back to Home</button></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Page UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 30px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header img {
+            width: 100px;
+        }
+        .header input {
+            flex-grow: 1;
+            padding: 20px 20px;
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .header button {
+            padding: 20px 30px;
+            background-color: #6cfb48;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .breadcrumbs {
+            color: #888;
+            font-size: 14px;
+        }
+        .restaurant-header {
+            display: flex;
+            margin-top: 20px;
+        }
+        .restaurant-header img {
+            width: 60%;
+            border-radius: 10px;
+        }
+        .restaurant-info {
+            padding-left: 20px;
+        }
+        .restaurant-info h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .restaurant-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .restaurant-info .buttons {
+            margin-top: 10px;
+        }
+        .restaurant-info .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .restaurant-info .buttons button.direction {
+            background-color: #3bb77e;
+            color: #fff;
+        }
+        .restaurant-info .buttons button.bookmark {
+            background-color: #ffcc00;
+            color: #fff;
+        }
+        .restaurant-info .buttons button.share {
+            background-color: #555;
+            color: #fff;
+        }
+        .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .ratings .rating {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .ratings .rating span {
+            margin-left: 5px;
+            color: #666;
+        }
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        .side-images img {
+            width: 100px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-container {
+            display: flex;
+        }
+        .menu-categories {
+            width: 200px;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .menu-categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-categories li {
+            padding: 5px 0;
+        }
+        .menu-items {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .menu-item .details {
+            flex-grow: 1;
+        }
+        .menu-item .details h3 {
+            margin: 0;
+        }
+        .menu-item .details .price {
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+        }
+        .menu-item .details .rating {
+            color: rgb(255, 225, 0);
+        }
+        footer {
+            background-color: #d1c1c1;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        footer .buttons {
+            display: inline-block;
+        }
+        footer .buttons a button {
+            padding: 40px 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: #04ff00;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="ZOMATO.png" alt="Zomato Logo">
+        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+        <a href="login.html"> <button>Log in</button></a>
+        <a href="signup.html"> <button>Sign up</button></a>
+    </div>
+    <div class="container">
+        <div class="breadcrumbs">
+            Home / India / Ongole / Ongole Locality / Hotel Paradise / Order Online
+        </div>
+        <div class="restaurant-header">
+            <img src="babai hotel.jpg" alt="Food Image">
+            <div class="restaurant-info">
+                <h1>Babai Hotel</h1>
+                <p>Andhra, Biryani, North Indian, South Indian, German</p>
+                <p>Ongole Locality, Ongole</p>
+                <div class="buttons">
+                    <button class="direction">Direction</button>
+                    <button class="bookmark">Bookmark</button>
+                    <button class="share">Share</button>
+                </div>
+                <div class="ratings">
+                    <div class="rating">
+                        <span style="color: green;">4.6</span>
+                        <span>107 Dining Ratings</span>
+                    </div>
+                    <div class="rating">
+                        <span style="color: orange;">3.9</span>
+                        <span>17.6K Reviews</span>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="menu-categories">
+            <ul>
+                <li>Best in Dosa (9)</li>
+                <li style="font-weight: bold; color: red;">Our Specials (2)</li>
+                
+            </ul>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="dosa.jpg" alt="Dosa">
+                <div class="details">
+                    <h3>Plain Dosa</h3>
+                    <div class="rating">★★★☆☆ (39 votes)</div>
+                    <div class="price">₹100</div>
+                  
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="idli.jpg" alt="idli">
+                <div class="details">
+                    <h3>Idli</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹80</div>
+                
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="vada.jpeg" alt="Vada">
+                <div class="details">
+                    <h3>Vada</h3>
+                    <div class="rating">★★★★☆ (53 votes)</div>
+                    <div class="price">₹100</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="pongal.jpeg" alt="Pongal">
+                <div class="details">
+                    <h3>Pongal</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹150</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="upma dosa.jpeg" alt="Upma dosa">
+                <div class="details">
+                    <h3>PUpma dosa</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹200</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="masala dosa.jpeg" alt="Masala Dosa">
+                <div class="details">
+                    <h3>Masala Dosa</h3>
+                    <div class="rating">★★★☆☆ (24 votes)</div>
+                    <div class="price">₹220</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="karam dosa.jpg" alt="Karam Dosa">
+                <div class="details">
+                    <h3>Karam Dosa</h3>
+                    <div class="rating">★★★☆☆ (32 votes)</div>
+                    <div class="price">₹150</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="uthapam.jpeg" alt="uthapam">
+                <div class="details">
+                    <h3>Uthapam</h3>
+                    <div class="rating">★★★☆☆ (50 votes)</div>
+                    <div class="price">₹180</div>
+                </div>
+            </div>
+     </div>
+    </div>
+    <footer>
+        <div class="buttons">
+            <a href="Home.html"><button>Back to Home</button></a>
+        </div>
+    </footer>
+</body>
+</html>
